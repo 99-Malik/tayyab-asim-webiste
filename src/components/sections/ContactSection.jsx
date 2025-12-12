@@ -1,6 +1,6 @@
 "use client";
 
-import { companyName, dialPhone, sendMessage } from "@/libs/data";
+import { companyName, phoneNumber, phoneNumberForUrl } from "@/libs/data";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import CallAndWhatsappButton from "../buttons/CallAndWhatsappButton";
 
@@ -29,8 +29,8 @@ const ContactSection = ({ company = companyName }) => {
                                 <div>
                                     <h3 className="text-lg font-semibold text-foreground mb-1">Phone</h3>
                                     <p className="text-muted-foreground mb-2">24/7 Emergency Support</p>
-                                    <a href={`tel:${dialPhone}`} className="text-lg font-bold text-primary hover:underline">
-                                        {dialPhone}
+                                    <a href={`tel:${phoneNumberForUrl}`} className="text-lg font-bold text-primary hover:underline">
+                                        {phoneNumber}
                                     </a>
                                 </div>
                             </div>

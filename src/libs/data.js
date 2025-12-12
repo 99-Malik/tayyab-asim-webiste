@@ -1,18 +1,19 @@
 
-export const companyName = "Appliance Repair Website";
+export const companyName = "United Service Center";
 
-export const phoneNumber = "+123456789";
+export const phoneNumber = "+971 50 402 7148";
+export const phoneNumberForUrl = "+971504027148"; // Phone number without spaces for URLs
 
 export const sendMessage = () => {
-  const message = "Hi,I need Appliance Repair Service Appointment.";
-  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+  const message = `Hi, I need ${companyName} Service Appointment.`;
+  const url = `https://wa.me/${phoneNumberForUrl}?text=${encodeURIComponent(
     message
   )}`;
   window.open(url, "_blank"); // Opens WhatsApp in a new tab
 };
 
 export const dialPhone = () => {
-  window.location.href = `tel:${phoneNumber}`;
+  window.location.href = `tel:${phoneNumberForUrl}`;
 };
 
 export const getData = (company, route) => {
